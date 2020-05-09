@@ -26,4 +26,10 @@ public class ProjectClient {
         projectsCache.put(projectId, project);
         return project;
     }
+
+    public ProjectInfo getProjectFromCache(long projectId, Throwable cause) {
+        logger.info("Getting project with id {} from cache", projectId);
+        return projectsCache.get(projectId);
+    }
+
 }
